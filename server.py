@@ -9,7 +9,6 @@ port = 7000
 server.bind((ip_address, port))
 server.listen()
 
-#array in javascript is called list in python
 list_of_clients = []
 nicknames = []
 
@@ -51,7 +50,7 @@ while True:
     nickname = conn.recv(2048).decode('utf-8')
     list_of_clients.append(conn)
     nicknames.append(nickname)
-    #this {} way of writing code is string formatting
+
     message = "{} joined!".format(nickname)
     print(message)
     broadcast(message, conn)
