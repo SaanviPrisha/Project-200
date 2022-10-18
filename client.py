@@ -3,13 +3,9 @@ from threading import Thread
 
 nickname = input("Choose your nickname: ")
 
-#create a TCP socket called client-ip add. +port
-#socket.socket(family,socket type) by default ipv4-AF_INET
-#sock_stream- tcp socket...  sock_dgram=> udp socket
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 ip_address = '127.0.0.1'
-#port can be any number.just make sure it is not anything lower than 1024
 port = 7000
 
 client.connect((ip_address, port))
